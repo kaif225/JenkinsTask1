@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux System Information</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #info {
+            font-size: 18px;
+            color: #0066cc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOURNAME - Task B</h1>
+    <div id="info">
+        <p>Hostname: <?php echo gethostname(); ?></p>
+        <p>Operating System: <?php echo php_uname('s'); ?> <?php echo php_uname('r'); ?></p>
+        <p>Kernel Version: <?php echo php_uname('v'); ?></p>
+        <p>Uptime: <?php echo shell_exec('uptime'); ?></p>
+        <p>IP Address: <?php echo $_SERVER['SERVER_ADDR']; ?></p>
+    </div>
+</body>
+</html>
+
